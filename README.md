@@ -1,24 +1,15 @@
-# README
+# Belle Scott's Oceanography Final Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application will be an interactive and informative experience for users, made up of mostly static pages and apis with hurricane/relavent ocean hazard data. 
 
-Things you may want to cover:
+Link to deployed website: <will enter once deployed>
 
-* Ruby version
+Specs and Instructions:
 
-* System dependencies
+* Ruby version: 2.7.2
 
-* Configuration
+* Rails version: 6.1.1
 
-* Database creation
+* Database: Postgres version 13
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* To run: clone this reposity, install all dependencies with bundle install, then run with rails s
