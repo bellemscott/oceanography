@@ -1,4 +1,4 @@
-# Belle Scott's Oceanography Final Project
+# Belle Scott and Melissa Rothenberg's Oceanography Final Project
 
 This application will be an interactive and informative experience for users, made up of mostly static pages and apis with hurricane/relavent ocean hazard data. 
 
