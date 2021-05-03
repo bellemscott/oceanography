@@ -3,14 +3,12 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-import Rails from "@rails/ujs"
-import Turbolinks from "turbolinks"
-import * as ActiveStorage from "@rails/activestorage"
-import "channels"
+require("@rails/ujs").start()
+require("turbolinks").start()
+require("@rails/activestorage").start()
+require("channels")
+require("jquery")
 
-Rails.start()
-Turbolinks.start()
-ActiveStorage.start()
 
 //= require jquery3
 //= require jquery_ujs
@@ -59,4 +57,14 @@ var wave1 = $('#feel-the-wave').wavify({
     return false;
   });
   
- 
+  $(document).ready(function() {
+    // Transition effect for navbar 
+    $(window).scroll(function() {
+      // checks if window is scrolled more than 500px, adds/removes solid class
+      if($(this).scrollTop() > 500) { 
+          $('.navbar').addClass('solid');
+      } else {
+          $('.navbar').removeClass('solid');
+      }
+    });
+});

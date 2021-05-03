@@ -6,9 +6,13 @@
     <meta charset="utf-8">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'%>
 </head>
 <body>
-    <div class= "container" style="background:#ADD8E6" >
+<div class="image">
+   <h1 class="heading">Learn More About Sea Level Rise</h1>
+</div>
+    <div class= "container" style="background:#ADD8E6; margin-top:40px" >
                 <!-- Indicators --> 
                 <% @infographs.each do |title, card|%>
                         <div class="container flip-card">
@@ -19,9 +23,20 @@
                                 </div>
                                 <div class="flip-card-back">
                                     <div class="center" style="padding:60px">
-                                        <%=title%>
                                         <div class="card-body">
                                         <%=card%>
+                                        <% if title == "What is sea level rise?"%>
+                                        <br>
+                                        <ol>
+                                        <li>
+                                            Changes in Land Elevation (EX: tectonic uplift)
+                                        </li>
+                                        <li>
+                                            Changes in Volume of Seawater due to temperature changes (Water expands when it’s warm)                                        </li>
+                                        <li>
+                                            Changes in Mass of Seawater due to the amount of ice on land (EX: melting ice sheets/glaciers)                                        </li>
+                                        </ol>
+                                    <% end%>
                                         </div>
                                     </div>
                                 </div>
@@ -30,6 +45,10 @@
                     <br>
                     <br>
                 <%end%>
+    </div>
+        <div class="ocean">
+        <div class="wave"></div>
+        <div class="wave"></div>
     </div>
     <%= render 'layouts/footer'%>
 </body>
